@@ -67,10 +67,10 @@ Download_Background = read_config.call('Download_Background') != 'false'
 Custom_BG_Zoom = read_config.call('Custom_BG_Zoom') == 'true'
 
 temp = read_config.call('Width').to_i
-$width = temp < 600 ? 550 : temp
+$width = temp < 550 ? 550 : temp
 
 temp = read_config.call('Height').to_i
-$height = temp < 500 ? 525 : temp
+$height = temp < 525 ? 525 : temp
 
 temp = read_config.call('Title')
 Title = temp.empty? ? 'Weather' : temp
