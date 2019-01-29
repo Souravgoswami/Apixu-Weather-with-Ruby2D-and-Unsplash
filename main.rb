@@ -577,11 +577,11 @@ def main
 		drag_object.x, drag_object.y, drag_object.opacity = e.x - drag_object.width/2.0, e.y - drag_object.height/2.0, 1 if drag_object
 		mouse_circle.each { |temp| temp.x, temp.y = e.x, e.y } if mouse_pressed
 
-		sparkle_toggle_touched = sparkle_toggle.contains?(e.x, e.y) ? true : false
-		change_background_button_touched = change_background_button.contains?(e.x, e.y) ? true : false
-		power_button_touched = power_button.contains?(e.x, e.y) ? true : false
-		bg_refresh_touched = refresh_button.contains?(e.x, e.y) ? true : false
-		screenshot_button_touched = screenshot_button.contains?(e.x, e.y) ? true : false
+		sparkle_toggle_touched = sparkle_toggle.contains?(e.x, e.y)
+		change_background_button_touched = change_background_button.contains?(e.x, e.y)
+		power_button_touched = power_button.contains?(e.x, e.y)
+		bg_refresh_touched = refresh_button.contains?(e.x, e.y)
+		screenshot_button_touched = screenshot_button.contains?(e.x, e.y)
 
  		if screenshot_button_touched then mouse_circle.each { |c| c.z = -10000 }
 			else mouse_circle.each { |val| val.z = 1 } end
